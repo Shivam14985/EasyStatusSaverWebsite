@@ -63,6 +63,59 @@
     <title>Easy Status Saver - #1 WhatsApp Status Downloader App</title>
 
     <style>
+         .install-guide {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .install-step {
+        background: #fff;
+        border-radius: 15px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        text-align: center;
+    }
+
+    .install-step:hover {
+        transform: translateY(-5px);
+    }
+
+    .install-step img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+    }
+
+    /* Large screens (3 columns) */
+    @media (min-width: 1200px) {
+        .install-guide {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    /* Medium screens (2 columns) */
+    @media (max-width: 1199px) and (min-width: 768px) {
+        .install-guide {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* Mobile (1 column) */
+    @media (max-width: 767px) {
+        .install-guide {
+            grid-template-columns: 1fr;
+        }
+        
+        .install-step {
+            margin: 0 auto;
+            max-width: 350px;
+        }
+    }
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #27ae60;
@@ -316,24 +369,52 @@
         </section>
 
         <!-- Installation Guide -->
-        <section class="my-5">
-            <h2 class="text-center mb-4">📲 Installation Guide</h2>
-            <div class="install-guide">
-                <div class="install-step">
-                    <h4>1. Enable Unknown Sources</h4>
-                    <p>Settings → Security → Enable Unknown Sources</p>
-                </div>
-                <div class="install-step">
-                    <h4>2. Download APK</h4>
-                    <p>Click the download button</p>
-                </div>
-                <div class="install-step">
-                    <h4>3. Install & Enjoy</h4>
-                    <p>Open file and install</p>
-                </div>
-            </div>
-        </section>
+<section class="my-5">
+    <h2 class="text-center mb-4">📲 Installation Guide</h2>
+    <div class="install-guide">
+        <!-- Step 1 -->
+        <div class="install-step">
+            <img src="images/Step1.jpg" alt="Step 1: Enable Unknown Sources" loading="lazy">
+            <h4>1. Click Download</h4>
+            <p>Click the download button below to get the APK file</p>
+        </div>
 
+        <!-- Step 2 -->
+        <div class="install-step">
+            <img src="images/Step2.jpg" alt="Step 2: Download APK File" loading="lazy">
+            <h4>2. Download Anyway</h4>
+            <p>Click the download anyway to start downloading</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="install-step">
+            <img src="images/Step3.jpg" alt="Step 3: Locate Downloaded File" loading="lazy">
+            <h4>3. Open File</h4>
+            <p>Open your Downloads folder and find the APK file</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="install-step">
+            <img src="images/Step4.jpg" alt="Step 4: Start Installation" loading="lazy">
+            <h4>4. Enable Unknown Sources</h4>
+            <p>Go to Settings → Security → Enable installation from unknown sources</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="install-step">
+            <img src="images/Step5.jpg" alt="Step 5: Grant Permissions" loading="lazy">
+            <h4>5. Allow Permissions</h4>
+            <p>Grant necessary permissions when prompted</p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="install-step">
+            <img src="images/Step6.png" alt="Step 6: Complete Setup" loading="lazy">
+            <h4>6. Scan & Install</h4>
+            <p>Complete installation and launch the app</p>
+        </div>
+    </div>
+</section>
         <!-- Download Section -->
         <div id="download" class="text-center my-5">
             <a href="downloads/EasyStatusSaver.apk" 
